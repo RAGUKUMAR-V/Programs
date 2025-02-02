@@ -2,28 +2,21 @@ package Arrays;
 
 import java.util.*;
 
-public class LongestSubArrayForTheGivenSum {
+public class LongestSubArrayForTheGivenSum {	
 	
-	
-	public static int solve(int [] arr, int sum) {
-		
-		
-		int len=0;
-		
+	public static int solve(int [] arr, int sum) {		
+		int len=0;		
 		for(int i=0;i<arr.length;i++) {
 			int s=0;
-			for(int j=i;j<arr.length;j++) {
-				
+			for(int j=i;j<arr.length;j++) {				
 				s=s+arr[j];
 				if(s==sum) {
 					len=Math.max(len,j-i+1);
-				}
-								
+				}								
 			}
 		}
-		return len;
-		
-	}
+		return len;		
+	}	
 	
 	public static int solve2(int [] arr, int k) {
 		
@@ -34,32 +27,25 @@ public class LongestSubArrayForTheGivenSum {
 			sum=sum+arr[i];
 			if(sum==k) {
 				Maxlen=Math.max(Maxlen, i+1);
-			}
-			
-			int rem=sum-k;
-			
+			}			
+			int rem=sum-k;			
 			if(map.containsKey(rem)) {
 				int len=i-map.get(rem);
 				Maxlen=Math.max(Maxlen, len);
-			}
-			
+			}			
 			if(!map.containsKey(sum)) {
 				map.put(sum,1);
-			}
-			
+			}			
 		}
-		return Maxlen;
-		
+		return Maxlen;		
 	}
-
-	public static void main(String[] args) {
-		
-		int[] array= {1,-1,1,-1,1};
-		int maxlen=solve(array, 1);
+	
+	
+	public static void main(String[] args) {		
+		int[] array= {2,3,4,5,1,1,1,1,1};
+		int maxlen=solve2(array, 14);
 		System.out.println(maxlen);
 		
-		
-
 	}
 
 }

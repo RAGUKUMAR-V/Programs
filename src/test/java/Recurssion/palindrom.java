@@ -15,7 +15,7 @@ public class palindrom {
 	public static void main(String[] args) {
 		
 		
-		String word="1";
+		String word="111";
 		int size=word.length();
 		
 		

@@ -23,7 +23,7 @@ public class countoftherepeatedwordsinstring {
 		
 		  Set<String> ww=count.keySet();
 		  for(String wor:ww) {
-			  if(count.get(wor)>1) {
+			  if(count.get(wor)>0) {
 		  System.out.println(wor + ":" +count.get(wor)); } }
 		 
 	}

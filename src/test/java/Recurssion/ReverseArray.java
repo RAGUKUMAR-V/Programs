@@ -40,7 +40,7 @@ public class ReverseArray {
 	public static void main(String[] args) {
 
 		int[] array= {1,2,3,4,5};
-		int last=array.length-1;
+		int last=array.length;
 		int first=0;
 
 		//reverse(first,last,array);
