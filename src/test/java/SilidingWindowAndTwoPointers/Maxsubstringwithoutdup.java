@@ -16,18 +16,19 @@ public class Maxsubstringwithoutdup {
 			
 			if(map.containsKey(given.charAt(right))) {				
 				left=Math.max(map.get(given.charAt(right))+1, left);
-			
+			System.out.println(left);
 			}			
 			map.put(given.charAt(right), right);			
 			len=Math.max(len,right-left+1);
 			right++;		
 		}
+		
 		return len;
 	}
 
 	public static void main(String[] args) {
 		
-		String given="ragu";
+		String given="123414256";
 		
 		int sublen=solve(given);
 		System.out.println(sublen);
