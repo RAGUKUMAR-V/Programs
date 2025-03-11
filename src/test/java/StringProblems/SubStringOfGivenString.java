@@ -33,12 +33,11 @@ public class SubStringOfGivenString {
 		String word="ragukumar";
 		Set<String>ans=subStrings(word);
 		for(String answer:ans) {
-			if(answer.length()==1)
+			if(answer.length()==2)
 			System.out.println(answer);
 	
 		}
 		
-
 	}
 
 }

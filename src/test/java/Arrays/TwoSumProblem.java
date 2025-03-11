@@ -50,12 +50,33 @@ public class TwoSumProblem {
 	
 	}
 	
+public static int[] solve3(int[] array, int len, int target) {
+		
+		//****if it's a sorted array we can use this or else we have to sort the array*****//
+		
+		int left=0,right=len-1;
+		int sum=0;
+		while(left<right) {
+			sum=array[left]+array[right];
+			if(sum==target) {
+				return new int[] {array[left],array[right]};
+			}
+			else if(sum<target) {
+				left++;
+				
+			}else {
+				right--;
+			}
+		}
+		return new int[] {-1,-1};
+	}
+	
 	public static void main(String[] args) {
 		
 		int[] array= {1,2,3,4,6,7,7,8};
 		int len=array.length;
-		int target=10;
-		int[] ans=solve2(array, len,target );
+		int target=5;
+		int[] ans=solve3(array, len,target );
 		System.out.println(ans[0]+ " "+ans[1]);
 		
 		
