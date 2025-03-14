@@ -35,7 +35,7 @@ public class LongestPalindromicSubString {
 
 	public static void main(String[] args) {
 	
-		String given="bababcd";
+		String given="ragukumar";
 		String ans=solve(given);
 		System.out.println(ans);
 

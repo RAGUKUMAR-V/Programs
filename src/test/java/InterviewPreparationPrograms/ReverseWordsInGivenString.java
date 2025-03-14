@@ -4,7 +4,7 @@ public class ReverseWordsInGivenString {
 	
 	public static String solve(String s) {
 		
-	 	s=s.trim();
+	      	s=s.trim();
 			String[] words=s.split("\\s+");
 			String reverse="";
 			
